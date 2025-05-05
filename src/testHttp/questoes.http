@@ -1,0 +1,19 @@
+@url = https://miniature-train-w6j697rxw7939gvw-8080.app.github.dev/
+@token = <TOKEN_AQUI>
+
+GET {{url}}/questoes
+Authorization: Bearer {{token}}
+
+###
+POST {{url}}/questoes
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "enunciado": "Qual é a capital do Brasil?",
+    "categoriaId": 1,
+    "opcoes": [
+        { "descricao": "Brasília", "isCorreta": true },
+        { "descricao": "São Paulo", "isCorreta": false }
+    ]
+}
